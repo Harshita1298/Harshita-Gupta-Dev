@@ -4,7 +4,8 @@
   "description": "A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my projects, skills, and achievements in web development.\r 📌 Features\r ✅ Fully responsive design\r ✅ Interactive UI with animations\r ✅ Project showcase section\r ✅ Contact form integration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,6 @@
     "express": "^4.21.2",
     "mongoose": "^8.10.2",
     "nodemailer": "^6.10.0"
-  }
+  },
+  "devDependencies": {}
 }

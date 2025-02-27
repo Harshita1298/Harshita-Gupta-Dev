@@ -55,13 +55,14 @@ app.post('/submit-form', async (req, res) => {
             text: `Hello ${fullName},\n\nThank you for reaching out! We will get back to you soon.\n\nYour Message:\n${message}\n\nBest Regards,\nYour Company`
         };
 
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.log(error);
-                return res.status(500).send('Error while sending email');
-            }
-            res.status(200).send('Message received & Email sent successfully!');
-        });
+     transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        console.error("❌ Email Send Error:", error);
+        return res.status(500).json({ success: false, message: 'Error while sending email', error: error.message });
+    }
+    console.log("✅ Email Sent Successfully:", info.response);
+    res.status(200).json({ success: true, message: 'Message received & Email sent successfully!' });
+});
 
     } catch (error) {
         console.log(error);
