@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const Contact = require('./models/Contact'); // Contact Model import करें
+const sendEmail = require('./models/mail'); // Import Mail.js
 
 // Express app initialize
 const app = express();
@@ -42,6 +43,8 @@ app.post('/submit-form', async (req, res) => {
         // Send Confirmation Email
         const transporter = nodemailer.createTransport({
             service: 'gmail',
+            securet: true,
+            port: 465,
             auth: {
                 user: process.env.EMAIL,
                 pass: process.env.PASSWORD
@@ -53,16 +56,16 @@ app.post('/submit-form', async (req, res) => {
             to: email,
             subject: `Thank You for Contacting Us - ${subject}`,
             text: `Hello ${fullName},\n\nThank you for reaching out! We will get back to you soon.\n\nYour Message:\n${message}\n\nBest Regards,\nYour Company`
-        };
+        }; m
 
-     transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        console.error("❌ Email Send Error:", error);
-        return res.status(500).json({ success: false, message: 'Error while sending email', error: error.message });
-    }
-    console.log("✅ Email Sent Successfully:", info.response);
-    res.status(200).json({ success: true, message: 'Message received & Email sent successfully!' });
-});
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error("❌ Email Send Error:", error);
+                return res.status(500).json({ success: false, message: 'Error while sending email', error: error.message });
+            }
+            console.log("✅ Email Sent Successfully:", info.response);
+            res.status(200).json({ success: true, message: 'Message received & Email sent successfully!' });
+        });
 
     } catch (error) {
         console.log(error);

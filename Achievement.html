@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Harshita..Portfolio</title>
+    <link rel="icon" type="image/png" href="img/logo-removebg-preview.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="js/server.js"></script>
+    <!-- Demo styles 
+         <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+    
+        body {
+            background: #001b29;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #ededed;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #001b29;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .menu {
+            min-width: 100px;
+            width: 70%;
+            max-width: 320px;
+    
+            background-color: #112e42;
+            color: #ededed;
+        }
+    
+        .content {
+            width: 100%;
+        }
+    
+        .menu-button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+    
+            padding: 15px;
+    
+            cursor: pointer;
+    
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+    
+          
+    
+            /*margin: 14px;
+    			border-radius: 5px;*/
+        }
+    
+        .menu-button .bar:nth-of-type(1) {
+            margin-top: 0px;
+        }
+    
+        .menu-button .bar:nth-of-type(3) {
+            margin-bottom: 0px;
+        }
+    
+        .bar {
+            position: relative;
+            display: block;
+    
+            width: 50px;
+            height: 5px;
+    
+            margin: 10px auto;
+            background-color:#112e42;
+    
+            border-radius: 10px;
+    
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+    
+        .menu-button:hover .bar:nth-of-type(1) {
+            -webkit-transform: translateY(1.5px) rotate(-4.5deg);
+            -ms-transform: translateY(1.5px) rotate(-4.5deg);
+            transform: translateY(1.5px) rotate(-4.5deg);
+        }
+    
+        .menu-button:hover .bar:nth-of-type(2) {
+            opacity: 0.9;
+        }
+    
+        .menu-button:hover .bar:nth-of-type(3) {
+            -webkit-transform: translateY(-1.5px) rotate(4.5deg);
+            -ms-transform: translateY(-1.5px) rotate(4.5deg);
+            transform: translateY(-1.5px) rotate(4.5deg);
+        }
+    
+        .cross .bar:nth-of-type(1) {
+            -webkit-transform: translateY(15px) rotate(-45deg);
+            -ms-transform: translateY(15px) rotate(-45deg);
+            transform: translateY(15px) rotate(-45deg);
+        }
+    
+        .cross .bar:nth-of-type(2) {
+            opacity: 0;
+        }
+    
+        .cross .bar:nth-of-type(3) {
+            -webkit-transform: translateY(-15px) rotate(45deg);
+            -ms-transform: translateY(-15px) rotate(45deg);
+            transform: translateY(-15px) rotate(45deg);
+        }
+    
+        .cross:hover .bar:nth-of-type(1) {
+            -webkit-transform: translateY(13.5px) rotate(-40.5deg);
+            -ms-transform: translateY(13.5px) rotate(-40.5deg);
+            transform: translateY(13.5px) rotate(-40.5deg);
+        }
+    
+        .cross:hover .bar:nth-of-type(2) {
+            opacity: 0.1;
+        }
+    
+        .cross:hover .bar:nth-of-type(3) {
+            -webkit-transform: translateY(-13.5px) rotate(40.5deg);
+            -ms-transform: translateY(-13.5px) rotate(40.5deg);
+            transform: translateY(-13.5px) rotate(40.5deg);
+        }
+    </style>
+Link Swiper's CSS 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+-->
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+    
+        body {
+            background: #001b29;;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+    
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header desing-->
+    <header class="header" style="background-color: #112e42;">
+        <a href="#" class="logo">
+            harshita.
+        </a>
+        <div class="bx bx-menu" id="menu-icon">
+            <i class="fa-solid fa-bars">
+            </i>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <span class="active-nav">
+
+            </span>
+        </nav>
+    </header>  
+    <section class="Achievement" id="#Achievement" >
+        <center><h1 style="font-size: 50px;color: #ededed;">Achievement</h1></center>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="img/c1.jpeg"/>
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c2.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c3.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c4.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c5.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c6.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c7 (1).png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c8.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="img/c10 (1).png" />
+        </div>
+            <div class="swiper-slide">
+                <img src="img/c11.png" />
+            </div>
+                <div class="swiper-slide">
+                    <img src="img/c10 (2).png" />
+                </div>
+                    <div class="swiper-slide">
+                        <img src="img/c9.png" />
+                    </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright ©2023 by harshita | All Rights Reserved. </p>
+        </div>
+        <div class="footer-icontop">
+            <a href="#home"> <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+        
+    <script src="js/js.js"></script>
+</body>
+
+</html>
